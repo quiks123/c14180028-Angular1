@@ -1,4 +1,11 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+Baris <input [(ngModel)] ="baris" type="text" /> Kolom <input [(ngModel)]="kolom" type ="text"/>
+<div *ngFor="let i of papan">
+    <span *ngFor="let j of i">
+        {{j}}
+    </span>
+</div>
+<br/>
+
+<button (click)="input()">Input</button>
+<button (click)="reset()">Reset</button>
